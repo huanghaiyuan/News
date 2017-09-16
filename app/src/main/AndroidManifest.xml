@@ -20,7 +20,8 @@
         </activity>
         <activity
             android:name=".ui.NewsDetailsActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleInstance"/>
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

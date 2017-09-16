@@ -12,21 +12,19 @@ import java.util.List;
 
 import cn.qizhidao.demo.R;
 import cn.qizhidao.demo.bean.NewsList;
+import cn.qizhidao.demo.util.DateUtils;
 
 /**
  * Created by Administrator on 2017/9/15.
  */
 
-public class MainAdapter extends BaseQuickAdapter<NewsList.Data,BaseViewHolder>{
-    public MainAdapter(@LayoutRes int layoutResId, @Nullable List data) {
+public class NewsClassAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
+    public NewsClassAdapter(@LayoutRes int layoutResId, @Nullable List data) {
         super(layoutResId, data);
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, NewsList.Data item) {
-            helper.setText(R.id.adapter_title,item.getTitle());
-        Glide.with(mContext)
-                .load(item.getTop_image())
-                .into((ImageView) helper.getView(R.id.adapter_img));
+    protected void convert(BaseViewHolder helper, String item) {
+        helper.setText(R.id.adapter_news_class_info, item);
     }
 }

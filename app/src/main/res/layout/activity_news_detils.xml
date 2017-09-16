@@ -1,61 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toolbar="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
-
-    <TextView
-        android:id="@+id/news_details_title"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/detail_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="@dimen/x20"
-        android:layout_marginLeft="@dimen/x8"
-        android:layout_marginRight="@dimen/x8"
-        android:layout_marginTop="@dimen/x8"/>
+        android:background="@color/colorPrimary"
+        toolbar:navigationIcon="@mipmap/ic_back"
+        toolbar:title="首页"
+        toolbar:titleTextColor="#ffffff" />
 
-    <TextView
-        android:id="@+id/news_details_time"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/news_details_title"
-        android:gravity="center"
-        android:textSize="@dimen/x8" />
+        android:layout_height="wrap_content">
+        android:layout_below="@+id/detail_toolbar" />
 
-    <ImageView
-        android:id="@+id/news_details_img"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/news_details_time"
-        android:layout_marginTop="@dimen/x5"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
 
-    <WebView
-        android:id="@+id/news_details_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/news_details_img"
-        android:layout_margin="@dimen/x14"/>
 
-    <TextView
-        android:id="@+id/news_details_source"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/news_details_content"
-        android:gravity="center"
-        android:textSize="@dimen/x8"
-        android:text="网易娱乐"
-        android:layout_margin="@dimen/x14"/>
+            <TextView
+                android:id="@+id/news_details_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x8"
+                android:layout_marginRight="@dimen/x8"
+                android:layout_marginTop="@dimen/x8"
+                android:gravity="center"
+                android:textSize="@dimen/x20" />
 
-    <TextView
-        android:id="@+id/news_details_readed_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/news_details_content"
-        android:gravity="center"
-        android:textSize="@dimen/x8"
-        android:text="236人"
-        android:layout_margin="@dimen/x14"/>
+            <TextView
+                android:id="@+id/news_details_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_details_title"
+                android:gravity="center"
+                android:textSize="@dimen/x8" />
 
-</RelativeLayout>
+            <WebView
+                android:id="@+id/news_details_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_details_time"
+                android:layout_margin="@dimen/x14"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/news_details_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/news_details_content"
+                android:layout_margin="@dimen/x14"
+                android:gravity="center"
+                android:text="网易娱乐"
+                android:textSize="@dimen/x8" />
+
+            <TextView
+                android:id="@+id/news_details_readed_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/news_details_content"
+                android:layout_margin="@dimen/x14"
+                android:gravity="center"
+                android:text="236人"
+                android:textSize="@dimen/x8" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -8,4 +8,5 @@ import cn.qizhidao.demo.bean.NewsDetails;
 
 public interface INewsDetailsView {
     void getNewsDetilsSucces(NewsDetails newsDetils);
+    void fail(String msg);
 }

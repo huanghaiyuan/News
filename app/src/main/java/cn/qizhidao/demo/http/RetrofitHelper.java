@@ -13,7 +13,7 @@ public class RetrofitHelper {
     private static final String TAG = RetrofitHelper.class.getName();
     private static RetrofitHelper mRetrofitManage;
     private Retrofit mRetrofit;
-    private RetrofitService service;
+    private ApiService service;
 
     private RetrofitHelper() {
     }
@@ -61,9 +61,9 @@ public class RetrofitHelper {
         return mRetrofit;
     }
 
-    public RetrofitService getService() {
+    public ApiService getService() {
         if (service == null) {
-            service = getRetrofit().create(RetrofitService.class);
+            service = getRetrofit().create(ApiService.class);
         }
         return service;
     }

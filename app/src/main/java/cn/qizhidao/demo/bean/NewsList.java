@@ -77,7 +77,7 @@ public class NewsList {
         private String content;
         private String digest;
         private String reply_count;
-        private String edit_time;
+        private long edit_time;
 
         public String getNews_id() {
             return news_id;
@@ -151,11 +151,11 @@ public class NewsList {
             this.reply_count = reply_count;
         }
 
-        public String getEdit_time() {
+        public long getEdit_time() {
             return edit_time;
         }
 
-        public void setEdit_time(String edit_time) {
+        public void setEdit_time(long edit_time) {
             this.edit_time = edit_time;
         }
     }

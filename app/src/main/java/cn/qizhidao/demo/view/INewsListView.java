@@ -8,4 +8,5 @@ import cn.qizhidao.demo.bean.NewsList;
 
 public interface INewsListView {
     void getNewsListSucces(NewsList newsList);
+    void fail(String msg);
 }

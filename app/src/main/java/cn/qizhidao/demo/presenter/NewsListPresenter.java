@@ -1,5 +1,7 @@
 package cn.qizhidao.demo.presenter;
 
+import android.widget.Toast;
+
 import cn.qizhidao.demo.bean.NewsList;
 import cn.qizhidao.demo.http.OnResponeListener;
 import cn.qizhidao.demo.modle.NewsListModle;
@@ -28,7 +30,7 @@ public class NewsListPresenter extends BasePresenter<INewsListView> {
 
             @Override
             public void failed(String s) {
-
+                getView().fail(s);
             }
         });
     }

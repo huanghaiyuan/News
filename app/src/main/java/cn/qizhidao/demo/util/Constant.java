@@ -8,6 +8,7 @@ public class Constant {
     public static final String BASE_URL = "http://api.dagoogle.cn/";
 
     public static class Intent_Tag{
-        public static final String NEWS_ID = "http://api.dagoogle.cn/";
+        public static final String NEWS_ID = "NewsId";
+        public static final String TABLE_NUM = "TableNum";
     }
 }
