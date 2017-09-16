@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/news_details_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/x20"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_marginRight="@dimen/x8"
+        android:layout_marginTop="@dimen/x8"/>
+
+    <TextView
+        android:id="@+id/news_details_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_details_title"
+        android:gravity="center"
+        android:textSize="@dimen/x8" />
+
+    <ImageView
+        android:id="@+id/news_details_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_details_time"
+        android:layout_marginTop="@dimen/x5"/>
+
+    <WebView
+        android:id="@+id/news_details_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_details_img"
+        android:layout_margin="@dimen/x14"/>
+
+    <TextView
+        android:id="@+id/news_details_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/news_details_content"
+        android:gravity="center"
+        android:textSize="@dimen/x8"
+        android:text="网易娱乐"
+        android:layout_margin="@dimen/x14"/>
+
+    <TextView
+        android:id="@+id/news_details_readed_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/news_details_content"
+        android:gravity="center"
+        android:textSize="@dimen/x8"
+        android:text="236人"
+        android:layout_margin="@dimen/x14"/>
+
+</RelativeLayout>
