@@ -20,9 +20,9 @@ public class NewsListPresenter extends BasePresenter<INewsListView> {
         modle = new NewsListModle();
     }
 
-    public void getNewsList(int  tableNum,int pageSize){
+    public void getNewsList(int  tableNum,int page,int pageSize){
 
-        modle.getNewsList(tableNum,pageSize, new OnResponeListener<NewsList>() {
+        modle.getNewsList(tableNum,page,pageSize, new OnResponeListener<NewsList>() {
             @Override
             public void success(NewsList newsList) {
                 getView().getNewsListSucces(newsList);

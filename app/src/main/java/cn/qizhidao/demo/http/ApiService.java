@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface ApiService {
     @GET("/news/get-news")
-    Observable<NewsList> getNewsList(@Query("tableNum") int tableNum, @Query("pagesize")  int pageSize);
+    Observable<NewsList> getNewsList(@Query("tableNum") int tableNum, @Query("page")  int page, @Query("pagesize")  int pageSize);
 
     @GET("/news/single-news")
     Observable<NewsDetails> getNewsDetils(@Query("news_id") String newsId, @Query("tableNum")  int tableNum);

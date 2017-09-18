@@ -8,4 +8,5 @@
     android:paddingRight="@dimen/x10"
     android:paddingBottom="@dimen/x5"
     android:paddingTop="@dimen/x5"
-    android:text="头条" />
+    android:text="头条"
+    android:textColor="@android:color/black"/>

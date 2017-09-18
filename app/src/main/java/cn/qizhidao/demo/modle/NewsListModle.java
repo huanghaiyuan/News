@@ -18,8 +18,8 @@ import io.reactivex.schedulers.Schedulers;
 
 public class NewsListModle implements INewsListModle {
     @Override
-    public void getNewsList(int tanleNum, int pageSize, final OnResponeListener listener) {
-        RetrofitHelper.getInstance().getService().getNewsList(tanleNum, pageSize).
+    public void getNewsList(int tanleNum, int page,int pageSize, final OnResponeListener listener) {
+        RetrofitHelper.getInstance().getService().getNewsList(tanleNum,page, pageSize).
                 subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<NewsList>() {

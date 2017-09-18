@@ -17,11 +17,16 @@
         android:id="@+id/main_news_class"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x1"/>
+        android:layout_marginTop="@dimen/x1" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_news_list"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/main_news_refre_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_news_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

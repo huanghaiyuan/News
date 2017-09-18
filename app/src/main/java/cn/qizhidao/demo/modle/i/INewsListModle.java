@@ -7,5 +7,5 @@ import cn.qizhidao.demo.http.OnResponeListener;
  */
 
 public interface INewsListModle {
-    void getNewsList(int tableNum, int pageSize, OnResponeListener listener);
+    void getNewsList(int tableNum, int page,int pageSize, OnResponeListener listener);
 }
