@@ -7,8 +7,7 @@
     <ImageView
         android:id="@+id/adapter_img"
         android:layout_width="@dimen/x100"
-        android:layout_height="@dimen/x100"
-        android:scaleType="centerCrop"/>
+        android:layout_height="@dimen/x100"/>
 
     <TextView
         android:id="@+id/adapter_title"
